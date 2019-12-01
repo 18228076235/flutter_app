@@ -4,11 +4,8 @@ import 'package:wanandroid_app/Router/index.dart';
 import 'package:wanandroid_app/common/Global.dart';
 import 'package:wanandroid_app/components/GmLocalizations.dart';
 import 'package:wanandroid_app/components/GmLocalizationsDelegate.dart';
-import 'package:wanandroid_app/routes/home_page.dart';
-import 'package:wanandroid_app/routes/login_page.dart';
 import 'package:wanandroid_app/style/colors.dart';
 import 'common/ProfileChangeNotifier.dart';
-import 'package:wanandroid_app/common/Global.dart';
 import 'package:wanandroid_app/common/ProfileChangeNotifier.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -44,7 +41,7 @@ class MyApp extends StatelessWidget {
               onGenerateTitle: (context) {
                 return GmLocalizations.of(context).getString(Ids.user_name);
               },
-              home: HomeRoute(), //应用主页
+              // home: HomeRoute(), //应用主页
               locale: localeModel.getLocale(),
               //我们只支持美国英语和中文简体
               supportedLocales: [

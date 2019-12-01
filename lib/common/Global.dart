@@ -47,7 +47,7 @@ class Global {
       ..maxCount = 100;
 
     //初始化网络请求相关配置
-    Http.init();
+    HttpUtil.getInstance();
   }
 
   // 持久化Profile信息

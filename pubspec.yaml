@@ -40,6 +40,8 @@ dev_dependencies:
   json_serializable: ^2.0.0
 
   provider: ^3.0.0+1
+  path_provider: ^1.3.0
+  cookie_jar: #latest version
   fluro: #latest version
 
 # For information on the generic Dart part of this file, see the
@@ -53,16 +55,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/ali_connors.png
-    - assets/images/ali_connors_sml.png
-    - assets/images/qrcode.png
-    - assets/images/icon_wan_android.png
-    - assets/images/ic_launcher_news.png
-    - assets/images/guide1.png
-    - assets/images/guide2.png
-    - assets/images/guide3.png
-    - assets/images/guide4.png
-    - assets/images/splash_bg.png
+    - assets/images/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

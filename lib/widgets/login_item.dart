@@ -32,37 +32,33 @@ class _LoginItemState extends State<LoginItem> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Icon(
-          widget.prefixIcon,
-          size: 28,
-          color: Theme.of(context).primaryColor,
+    return Container(
+      child: Expanded(
+        child: TextField(
+          controller: widget.controller,
+          autofocus: widget.autofocus,
+          decoration: InputDecoration(
+              prefixIcon:
+                  Icon(widget.prefixIcon, size: 28, color: Colours.gray_99),
+              hintText: widget.labelText,
+              hintStyle: TextStyle(color: Colours.gray_66, fontSize: 14),
+              suffixIcon: widget.hasSuffixIcon
+                  ? IconButton(
+                      icon: Icon(_obscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                      iconSize: 16,
+                      color: Colours.gray_66,
+                      onPressed: () {
+                        setState(() {
+                          _obscureText = !_obscureText;
+                        });
+                      },
+                    )
+                  : null),
+          obscureText: _obscureText,
         ),
-        Expanded(
-          child: TextField(
-            controller: widget.controller,
-            autofocus: widget.autofocus,
-            decoration: InputDecoration(
-                hintText: widget.labelText,
-                hintStyle: TextStyle(color: Colours.gray_66, fontSize: 14),
-                suffixIcon: widget.hasSuffixIcon
-                    ? IconButton(
-                        icon: Icon(_obscureText
-                            ? Icons.visibility
-                            : Icons.visibility_off),
-                        color: Colours.gray_66,
-                        onPressed: () {
-                          setState(() {
-                            _obscureText = !_obscureText;
-                          });
-                        },
-                      )
-                    : null),
-            obscureText: _obscureText,
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
